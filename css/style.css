@@ -262,6 +262,8 @@
   padding: 50px 20px;
   color: #fff;
   text-align: center;
+  max-width: 950px;
+  height: 100%;
 }
 
 #projetos h2 {
@@ -345,4 +347,60 @@
 
 .btn:hover {
   background-color: #00cc6e;
+}
+
+/* Acordeão de projetos (sem JS) */
+.project {
+  margin: 10px 0 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  background: transparent;
+  
+}
+
+.project-header {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 12px 14px;
+  background-color: rgba(255,255,255,0.05);
+  user-select: none;
+}
+
+/* remove o marcador padrão do <summary> */
+.project-header::-webkit-details-marker { display: none; }
+
+.project-header span {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.project .arrow {
+  transition: transform .25s ease;
+  font-size: 18px;
+  color: var(--main-color);
+}
+
+.project[open] .arrow {
+  transform: rotate(90deg);
+}
+
+.project-content {
+  padding: 12px 8px 0;
+}
+
+/* mantém seu visual dos cards */
+.project .card { margin-bottom: 14px; }
+
+
+
+#Pprojetos a{
+    text-decoration: none;
+    color: var(--main-color);
+    margin-left: -16px;
+
 }
