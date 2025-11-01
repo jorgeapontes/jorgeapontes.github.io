@@ -221,6 +221,9 @@
         .whatsapp:hover {
             background: linear-gradient(135deg, #25D366, #128C7E);
         }
+        .forms:hover {
+            background: linear-gradient(135deg, #B91D23, #0A1931);
+        }
 
 @media(max-width: 450px){
     #container{
