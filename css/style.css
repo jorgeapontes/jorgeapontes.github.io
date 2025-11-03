@@ -2,6 +2,13 @@
     padding: 0;
     margin: 0;
     font-family: "Roboto"
+    
+}
+
+/* NOVO: Impede o scroll horizontal em toda a página */
+body {
+    overflow-x: hidden;
+    
 }
 
 :root{
@@ -13,14 +20,92 @@
     --about-bg-color: #1E2A3A;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .highlight{
     color: var(--main-color);
+}
+
+/* Navbar */
+#navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--bio-bg-color);
+    padding: 15px 0;
+    z-index: 1000;
+    /* CORREÇÃO DA BORDA: Usando uma cor sólida do tema para harmonizar ou remover */
+    border-bottom: 2px solid var(--bio-border-color); 
+    /* Ajuste para centralizar o navbar-content, se ele tivesse max-width, mas vamos remover */
+    justify-content: space-between; 
+    padding: 20px;
+    
+    
+}
+
+/* NOVO: Container para alinhar logo à esquerda e links à direita e centralizar o bloco no meio da tela */
+.navbar-content {
+    display: flex;
+    /* CORREÇÃO 1: Usar a largura total para que a logo e os links atinjam as bordas da tela */
+    width: 100%; 
+    /* CORREÇÃO 2: Remove o max-width para os links irem até a extrema direita */
+    /* REMOVIDO: max-width: 1200px; */ 
+    align-items: center;
+    /* CORREÇÃO 3: Isso coloca a logo (navlogo) na esquerda e os links (nav-container) na direita */
+    justify-content: space-between; 
+    /* Mantém o padding de 20px nas laterais para que os elementos não fiquem colados na borda */
+    padding: 30px; 
+    
+}
+
+/* ... o restante do seu CSS permanece inalterado ... */
+
+.navlogo {
+    max-width: 150px; 
+    height: 30px; 
+}
+
+.navlogo img {
+    height: 100%; 
+    width: auto;
+    display: block;
+}
+
+.nav-container {
+    padding: 0;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin-right: 20px;
+    
+}
+
+#navbar a {
+    color: var(--main-text-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+
+}
+
+#navbar a:hover {
+    background-color: var(--main-color);
+    color: white;
 }
 
 #container{
     display:flex;
     flex-direction:row;
     color: var(--main-text-color);
+    margin-top: 60px;
 }
 
 #bio-container{
@@ -39,6 +124,8 @@
     background-color: var(--about-bg-color);
     padding: 50px;
 }
+
+/* O restante do CSS permanece inalterado */
 
 #bio-container h2{
     margin-bottom: 25px;
@@ -60,14 +147,15 @@
     object-fit: cover;
 }
 
+/* CÓDIGO ANTIGO REMOVIDO/AJUSTADO: #social-container */
+/*
 #social-container{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     list-style: none;
     border-bottom: 1px solid var(--border-color);
     margin-bottom: 25px;
     padding-bottom: 25px;
-    
 }
 
 #social-container li{
@@ -79,24 +167,26 @@
     color:var(--main-color);
     font-size: 30px;
 }
+*/
 
 #email-container{
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
 }
 
-#email-container ion-icon
+#email-container ion-icon,
 #email-container a{
     flex: 1 1 0;
     margin-right:5px;
+    margin-bottom: 20px;
 }
 
 #email-container a{
     color: var(--main-text-color);
     text-decoration: none;
-    max-width: 225px
-
+    max-width: 225px;
 }
 
 #email-container ion-icon{
@@ -106,8 +196,7 @@
     max-width: 20px;
 }
 
-
-#name{
+#Name{
     font-size: 42px;
     margin-bottom: 15px;
 }
@@ -123,6 +212,7 @@
     margin-bottom: 10px;
 }
 
+/* CÓDIGO CORRIGIDO: #btn-projects agora não depende do seletor #social-container */
 #btn-projects{
     font-weight: bold;
     font-size: 16px;
@@ -132,15 +222,16 @@
     border-radius: 12px;
     text-decoration: none;
     transition: .5s;
-    margin: 25px 0;
+    margin: 25px 0; /* Mantenha a margem top para espaçamento */
     padding: 12px 7px 12px 10px;
     width: 150px;
     text-align: center;
     display: flex;
-    gap: 15px;
+    gap: 5px;
+    align-self: center; /* NOVO: Garante alinhamento vertical dentro do .button-group */
 }
 
-#btn-projects ion-icon
+#btn-projects ion-icon,
 #btn-projects span{
     flex: 1 1 0;
 }
@@ -153,12 +244,38 @@
 #btn-projects:hover{
     background-color: transparent;
 }
+
+/* NOVOS ESTILOS PARA ALINHAR OS BOTÕES LADO A LADO */
+.button-group {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o botão e os ícones */
+    gap: 20px; /* Espaçamento entre o botão e o grupo de ícones */
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    justify-content: flex-start;
+}
+
+#social-icons-container {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px; /* Espaçamento entre os ícones (LinkedIn e GitHub) */
+}
+
+#social-icons-container li a ion-icon {
+    color: var(--main-color);
+    font-size: 30px;
+    display: block; 
+}
+/* FIM DOS NOVOS ESTILOS */
+
 #skills-section-title{
     border-top: 1px solid var(--border-color);
     padding-top: 20px;
     margin-bottom: 20px;
     font-size: 32px;
-
 }
 
 #skills-container{
@@ -166,7 +283,6 @@
     flex-wrap: wrap;
     margin-top: 25px;
     gap: 50px;
-    
 }
 
 .skill-box{
@@ -192,40 +308,316 @@
 }
 
 .contact-btn {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            text-align: left;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
-            max-width: 150px;
-            justify-content: center;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 1.5rem;
-        }
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    max-width: 150px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+}
 
-         .contact-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
+.contact-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
 
-        .whatsapp:hover {
-            background: linear-gradient(135deg, #25D366, #128C7E);
-        }
-        .forms:hover {
-            background: linear-gradient(135deg, #B91D23, #0A1931);
-        }
+.whatsapp:hover {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.forms:hover {
+    background: linear-gradient(135deg, #B91D23, #0A1931);
+}
+
+#location-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 5px;
+    margin-right: 70px;
+}
+
+#location-container ion-icon{
+    color: var(--main-color);
+    font-size: 20px;
+    margin-right: 5px;
+    max-width: 20px;
+}
+
+/* Seção de projetos */
+#projetos {
+    padding: 50px 20px;
+    color: #fff;
+    text-align: center;
+    max-width: 950px;
+    height: 100%;
+}
+
+#projetos h2 {
+    display: flex;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #FFF; 
+}
+
+#projetos #Pprojetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Container dos cards */
+.cards-container {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    flex-direction: column;
+}
+
+/* Card individual */
+.card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Imagem do card */
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Conteúdo do card */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+/* Botões dentro do card */
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: #2e8b57;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00cc6e;
+}
+
+/* Acordeão de projetos (sem JS) */
+.project {
+    margin: 10px 0 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    background: transparent;
+}
+
+.project-header {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 12px 14px;
+    background-color: rgba(255,255,255,0.05);
+    user-select: none;
+}
+
+/* remove o marcador padrão do <summary> */
+.project-header::-webkit-details-marker { 
+    display: none; 
+}
+
+.project-header span {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.project .arrow {
+    transition: transform .25s ease;
+    font-size: 18px;
+    color: var(--main-color);
+}
+
+.project[open] .arrow {
+    transform: rotate(90deg);
+}
+
+.project-content {
+    padding: 12px 8px 0;
+}
+
+/* mantém seu visual dos cards */
+.project .card { 
+    margin-bottom: 14px; 
+}
+
+#Pprojetos a{
+    text-decoration: none;
+    color: var(--main-color);
+    margin-left: -16px;
+}
+
+/* --- CORREÇÃO DO SCROLL LATERAL AO CLICAR NA NAVBAR --- */
+
+/* Garante que o contêiner principal não tenha rolagem horizontal */
+#container {
+    overflow-x: hidden;
+}
+
+/* Faz com que os alvos das âncoras respeitem o fluxo vertical */
+#sobre-mim,
+#projetos,
+#skills {
+    scroll-margin-top: 100px; /* distância do topo para compensar a navbar */
+}
+
+/* Impede o "scroll automático lateral" ao focar âncoras */
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+#skillpoints{
+    margin-top: 40px;
+}
+
+#skillpoints li{
+    margin-bottom: 30px;
+    right: 150px;
+}
+/* === NOVO DESIGN DA SEÇÃO SOBRE MIM === */
+.about-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px 50px;
+  margin-bottom: 40px;
+  max-width: 900px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+}
+
+.about-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-card p.description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #d0d0d0;
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 30px;
+}
+
+.about-list li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#btn-projects {
+  margin-top: 20px;
+}
+
+#social-icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+#social-icons-container li a ion-icon {
+  color: var(--main-color);
+  font-size: 35px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#social-icons-container li a ion-icon:hover {
+  color: #00cc6e;
+  transform: scale(1.15);
+}
+
+
+
 
 @media(max-width: 450px){
+    #navbar ul {
+        justify-content: center;
+        padding-right: 0;
+        gap: 20px;
+    }
+
+    #navbar a {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    #container {
+        margin-top: 50px;
+    }
+
     #container{
         flex-direction: column;
     }
@@ -236,9 +628,7 @@
         border-bottom: 5px solid var(--bio-border-color);
     }
 
-    #bio-container h2{
-        display: none;
-    }
+      
 
     #bio-container p{
         max-width: 60%;
@@ -249,15 +639,66 @@
         text-align: center;
         padding: 30px;
     }
+    
+    /* MELHORIA PARA LEGIBILIDADE DO TEXTO NA SEÇÃO "SOBRE MIM" */
+    #about-container .description {
+        /* Permite que o texto use quase toda a largura da tela (95%) */
+        max-width: 95%; 
+        margin: 10px auto; /* Centraliza o parágrafo */
+        /* Alinha o texto à esquerda, eliminando as quebras irregulares do alinhamento 'justify' ou 'center' */
+        text-align: left; 
+    }
 
-    #about-container .description{
-        margin: 10px auto;
-        max-width: 100%;
-        line-height: 26px;
+    /* Garante que a lista de características também seja mais legível */
+    .about-card ul.about-list {
+        margin: 40px auto;
+        max-width: 95%;
+        padding-left: 0; 
+    }
+
+    .about-list li {
+        text-align: left; /* Garante que o texto da lista fique alinhado à esquerda para melhor leitura */
+        /* Pode-se adicionar overflow-wrap: break-word; aqui se houver palavras muito longas */
+    }
+    
+    /* Estilos já existentes para outros elementos mobile: */
+    #Name{
+        font-size: 32px;
+    }
+
+    #title{
+        font-size: 18px;
     }
 
     #btn-projects{
-        margin: 20px auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 120px;
+    }
+
+    #skills h2{
+        font-size: 1.5rem;
+    }
+
+    #skillpoints{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    #skillpoints li{
+        right: 0;
+        text-align: center;
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+    
+    .skill-box i{
+        font-size: 3em;
+    }
+    
+    .project-header span{
+        max-width: 70%;
     }
 
     .skill-box{
@@ -273,168 +714,3 @@
 }
 
 
-#location-container
-{
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    gap: 5px;
-    margin-right: 70px;
-}
-
-#location-container ion-icon{
-    color: var(--main-color);
-    font-size: 20px;
-    margin-right: 5px;
-    max-width: 20px;
-    
-}
-
-
-/* Seção de projetos */
-#projetos {
-  padding: 50px 20px;
-  color: #fff;
-  text-align: center;
-  max-width: 950px;
-  height: 100%;
-}
-
-#projetos h2 {
-    display: flex;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #FFF; 
-}
-
-#projetos #Pprojetos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-/* Container dos cards */
-.cards-container {
-  display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  flex-direction: column;
-}
-
-/* Card individual */
-.card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-/* Imagem do card */
-.card img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-
-/* Conteúdo do card */
-.card-content {
-  padding: 20px;
-}
-
-.card-content h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.card-content p {
-  font-size: 0.95rem;
-  color: #ccc;
-  margin-bottom: 15px;
-  line-height: 1.4;
-}
-
-/* Botões dentro do card */
-.card-buttons {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-.btn {
-  padding: 8px 15px;
-  border-radius: 8px;
-  text-decoration: none;
-  background-color: #2e8b57;
-  color: #fff;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #00cc6e;
-}
-
-/* Acordeão de projetos (sem JS) */
-.project {
-  margin: 10px 0 15px;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
-  border-radius: 10px;
-  overflow: hidden;
-  background: transparent;
-  
-}
-
-.project-header {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  padding: 12px 14px;
-  background-color: rgba(255,255,255,0.05);
-  user-select: none;
-}
-
-/* remove o marcador padrão do <summary> */
-.project-header::-webkit-details-marker { display: none; }
-
-.project-header span {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #fff;
-}
-
-.project .arrow {
-  transition: transform .25s ease;
-  font-size: 18px;
-  color: var(--main-color);
-}
-
-.project[open] .arrow {
-  transform: rotate(90deg);
-}
-
-.project-content {
-  padding: 12px 8px 0;
-}
-
-/* mantém seu visual dos cards */
-.project .card { margin-bottom: 14px; }
-
-
-
-#Pprojetos a{
-    text-decoration: none;
-    color: var(--main-color);
-    margin-left: -16px;
-
-}

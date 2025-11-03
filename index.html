@@ -4,39 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Jorge</title>
+    <link rel="icon" type="image/x-icon" href="img/20251103_1152_Logo Futurista JP_simple_compose_01k95390bmewasjzc169mhg06s.png">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- Dev icon-->
-     <!--não tirar-->
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <script src="scripts.js"></script>
 
 </head>
+
 <body>
+    <nav id="navbar">
+      <div class="navlogo">
+        <img src="img/20251103_1152_Logo Futurista JP_simple_compose_01k95390bmewasjzc169mhg06s.png" alt="logo">
+      </div>
+      <div class="nav-container">
+          <ul>
+              <li><a href="#sobre-mim">Sobre mim</a></li>
+              <li><a href="#projetos">Projetos</a></li>
+              <li><a href="#skills">Skills</a></li>
+          </ul>
+      </div>
+    </nav>
+
     <main id="container">
         <aside id="bio-container">
             
             <img id="bio-image" src="img/jpportfolio.jpg" alt="Jorge Pontes">
             <p>Olá, meu nome é Jorge e sou <span class="highlight">Desenvolvedor!</span></p>
             <p id="welcome-text">Seja bem-vindo!</p>    
-            <ul id="social-container">
-                <li>
-                    <a href="https://www.linkedin.com/in/jorgepontes13"><ion-icon name="logo-linkedin"></a>
-                </li>
-                <li>
-                    <a href="https://github.com/jorgeapontes"><ion-icon name="logo-github"></a>
-                </li>
-            </ul>
+            
             <div id="email-container">
             <ion-icon name="mail-outline"></ion-icon>
             <a href="mailto:jorgeappontes13@gmail.com">jorgeappontes13@gmail.com</a>
             </div>
             
-
+            <h2>Entre em Contato:</h2>
             <a href="https://wa.me/5511996563500?text=Olá! Vim pelo seu Portfólio, e gostaria de saber mais..." class="contact-btn whatsapp" target="_blank">
                         <i class="fab fa-whatsapp"></i>
                         <div class="btn-text">
@@ -53,206 +58,220 @@
             
         </aside>
         <section id="about-container">
-            <h1 id="Name">Jorge Pontes</h1>
-            <p id="title"><span class="highlight">Sobre mim:</span></p>
-            <p class="description">Desenvolvedor em aprendizagem de <span class="highlight">Front-end</span> e <span class="highlight">Back-end</span>.</p>
-            <p class="description">Atuo em ambas as áreas, e amo a tecnologia, estudo diariamente para me tornar cada vez melhor e escrever código de qualidade!</p>
-            <a href="https://github.com/jorgeapontes" id="btn-projects" target="_blank"><ion-icon name="share-social-outline"></ion-icon><span>Ver projetos</span> </a>
+            <!-- NOVO DESIGN SOBRE MIM -->
+            <div id="sobre-mim" class="about-card">
+                <h1 id="Name">Jorge Pontes</h1>
+                <p id="title"><span class="highlight">Sobre mim:</span></p>
+                <p class="description">
+                    Sou desenvolvedor com foco em <span class="highlight">Front-end</span> e <span class="highlight">Back-end</span>.
+                    Amo a tecnologia e estudo diariamente para escrever código de qualidade e me tornar cada vez melhor.
+                </p>
+                <ul class="about-list">
+                    <li>💻 Experiência com desenvolvimento Web e desktop;</li>
+                    <li>⚙️ Conhecimento em diversas linguagens de programação;</li>
+                    <li>🌍 Inglês avançado.</li>
+                </ul>
+                <a href="https://github.com/jorgeapontes" id="btn-projects" target="_blank">
+                    <ion-icon name="share-social-outline"></ion-icon>
+                    <span>Ver projetos</span>
+                </a>
+
+                <ul id="social-icons-container">
+                    <li><a href="https://www.linkedin.com/in/jorgepontes13" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    <li><a href="https://github.com/jorgeapontes" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+                    <li><a href="https://www.instagram.com/jorgeagp_/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                </ul>
+            </div>
             
 
+            <section id="projetos">
+                <h2>Meus Projetos</h2>
+                <p id="Pprojetos">Aqui estão alguns dos projetos que já realizei!</p>
 
-    <section id="projetos">
-  <h2>Meus Projetos</h2>
-  <p id="Pprojetos">Aqui estão alguns dos projetos que já realizei!</p>
+                <details class="project">
+                    <summary class="project-header">
+                        <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
+                        <span>Risenglish (Freelance)</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="card">
+                            <img src="img/{9BD96816-9954-4393-B69E-31419F0250DE}.png" alt="Imagem do Projeto 1">
+                            <div class="card-content">
+                                <p>O projeto, chamado Risenglish, é um sistema de gerenciamento de aulas de inglês.
+                                    Nele, os professores podem fazer upload dos materiais utilizados nas aulas, controlar presenças e gerenciar outros detalhes de forma prática e profissional. Já os alunos têm acesso facilitado a todos os arquivos e informações em um único lugar.</p>
+                                <div class="card-buttons">
+                                    <a href="https://github.com/jorgeapontes/Risenglish" target="_blank" class="btn">Ver</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
 
+                <details class="project">
+                    <summary class="project-header">
+                        <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
+                        <span>JapiWiki (Projeto Pessoal)</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="card">
+                            <img src="img/{D2246561-9111-4E28-9697-359A8376CEBF}.png" alt="Imagem do Projeto 1">
+                            <div class="card-content">
+                                <p>JapiWiki: Ciência Cidadã na Serra do Japi. Registre avistamentos de fauna, flora e eventos ambientais. Contribua para a ciência e conservação!</p>
+                                <div class="card-buttons">
+                                    <a href="https://github.com/jorgeapontes/ciencia_cidada" target="_blank" class="btn">Ver</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
 
-  <!-- Risenglish -->
-  <details class="project">
-    <summary class="project-header">
-      <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
-      <span>Risenglish (Freelance)</span>
-    </summary>
-    <div class="project-content">
-      <div class="card">
-        <img src="img/{9BD96816-9954-4393-B69E-31419F0250DE}.png" alt="Imagem do Projeto 1">
-        <div class="card-content">
-          <p>O projeto, chamado Risenglish, é um sistema de gerenciamento de aulas de inglês.
-Nele, os professores podem fazer upload dos materiais utilizados nas aulas, controlar presenças e gerenciar outros detalhes de forma prática e profissional. Já os alunos têm acesso facilitado a todos os arquivos e informações em um único lugar.</p>
-          <div class="card-buttons">
-            <a href="https://github.com/jorgeapontes/Risenglish" target="_blank" class="btn">Ver</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </details>
+                <details class="project">
+                    <summary class="project-header">
+                        <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
+                        <span>Calculadora de IMC com REACT</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="card">
+                            <img src="img/{1B23909E-78F0-4F84-9F14-C1F9021C6F02}.png" alt="Imagem do Projeto 6">
+                            <div class="card-content">
+                                <p>Projeto feito com o intuito de treinar JavaScript e React.</p>
+                                <div class="card-buttons">
+                                    <a href="https://github.com/jorgeapontes/IMC_REACT" target="_blank" class="btn">Ver</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
 
+                <details class="project">
+                    <summary class="project-header">
+                        <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
+                        <span>Gerador de QR Codes</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="card">
+                            <img src="img/{01CC4AF5-9FE6-4F90-B3DA-76EC7270765D}.png" alt="Imagem do Projeto 2">
+                            <div class="card-content">
+                                <p>Projeto simples e muito útil, para gerar QR Codes.</p>
+                                <div class="card-buttons">
+                                    <a href="https://github.com/jorgeapontes/QR_Code_Generator" target="_blank" class="btn">Ver</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
 
-  <!-- JapiWiki -->
-  <details class="project">
-    <summary class="project-header">
-      <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
-      <span>JapiWiki (Projeto Pessoal)</span>
-    </summary>
-    <div class="project-content">
-      <div class="card">
-        <img src="img/{D2246561-9111-4E28-9697-359A8376CEBF}.png" alt="Imagem do Projeto 1">
-        <div class="card-content">
-          <p>JapiWiki: Ciência Cidadã na Serra do Japi. Registre avistamentos de fauna, flora e eventos ambientais. Contribua para a ciência e conservação!</p>
-          <div class="card-buttons">
-            <a href="https://github.com/jorgeapontes/ciencia_cidada" target="_blank" class="btn">Ver</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </details>
+                <details class="project">
+                    <summary class="project-header">
+                        <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
+                        <span>Calculadora Estatística</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="card">
+                            <img src="img/{33000D50-E9C7-4F24-830B-80D15F9543F6}.png" alt="Imagem do Projeto 3">
+                            <div class="card-content">
+                                <p>Realize automaticamente diversos cálculos utilizando várias fórmulas, retornando diferentes tipos de resultados!</p>
+                                <div class="card-buttons">
+                                    <a href="https://github.com/jorgeapontes/Calculadora_estatistica" target="_blank" class="btn">Ver</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
 
-  <!-- Calculadora de IMC -->
-  <details class="project">
-    <summary class="project-header">
-      <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
-      <span>Calculadora de IMC com REACT</span>
-    </summary>
-    <div class="project-content">
-      <div class="card">
-        <img src="img/{1B23909E-78F0-4F84-9F14-C1F9021C6F02}.png" alt="Imagem do Projeto 6">
-        <div class="card-content">
-          <p>Projeto feito com o intuito de treinar JavaScript e React.</p>
-          <div class="card-buttons">
-            <a href="https://github.com/jorgeapontes/IMC_REACT" target="_blank" class="btn">Ver</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </details>
+                <details class="project">
+                    <summary class="project-header">
+                        <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
+                        <span>Clone página de venda iPhone 13</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="card">
+                            <img src="img/{A861BB5C-1531-41D6-A82D-D3EE02E8F641}.png" alt="Imagem do Projeto 4">
+                            <div class="card-content">
+                                <p>Clone feito com inspiração na página de venda do iPhone 13 do site da Apple, para treinar CSS e JavaScript.</p>
+                                <div class="card-buttons">
+                                    <a href="https://github.com/jorgeapontes/Clone_Pag_iPhone13" target="_blank" class="btn">Ver</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
 
-
-
-    <!-- Gerador de QR Codes -->
-  <details class="project">
-    <summary class="project-header">
-      <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
-      <span>Gerador de QR Codes</span>
-    </summary>
-    <div class="project-content">
-      <div class="card">
-        <img src="img/{01CC4AF5-9FE6-4F90-B3DA-76EC7270765D}.png" alt="Imagem do Projeto 2">
-        <div class="card-content">
-          <p>Projeto simples e muito útil, para gerar QR Codes.</p>
-          <div class="card-buttons">
-            <a href="https://github.com/jorgeapontes/QR_Code_Generator" target="_blank" class="btn">Ver</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </details>
-
-  <!-- Calculadora Estatística -->
-  <details class="project">
-    <summary class="project-header">
-      <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
-      <span>Calculadora Estatística</span>
-    </summary>
-    <div class="project-content">
-      <div class="card">
-        <img src="img/{33000D50-E9C7-4F24-830B-80D15F9543F6}.png" alt="Imagem do Projeto 3">
-        <div class="card-content">
-          <p>Realize automaticamente diversos cálculos utilizando várias fórmulas, retornando diferentes tipos de resultados!</p>
-          <div class="card-buttons">
-            <a href="https://github.com/jorgeapontes/Calculadora_estatistica" target="_blank" class="btn">Ver</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </details>
-
-  
-<!-- Clone Página de vendas Iphone 13 -->
-  <details class="project">
-    <summary class="project-header">
-      <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
-      <span>Clone página de venda iPhone 13</span>
-    </summary>
-    <div class="project-content">
-      <div class="card">
-        <img src="img/{A861BB5C-1531-41D6-A82D-D3EE02E8F641}.png" alt="Imagem do Projeto 4">
-        <div class="card-content">
-          <p>Clone feito com inspiração na página de venda do iPhone 13 do site da Apple, para treinar CSS e JavaScript.</p>
-          <div class="card-buttons">
-            <a href="https://github.com/jorgeapontes/Clone_Pag_iPhone13" target="_blank" class="btn">Ver</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </details>
-
-
-
-  
-  
-
-
-<p id="Pprojetos">Veja todos clicando <a href="https://github.com/jorgeapontes" target="_blank">aqui!</a>
-
-
-
-</section>
-
-<h2 id="skills-section-title">Minhas Skills</h2>
-            <p class="description">Veja as tecnologias que já tive experiência: </p>
-            <div id="skills-container">
                 
-                <div class="skill-box">
-                    <p class="skills-title">Front-end</p>
-                    <i class="devicon-html5-plain colored"></i>
-                    <i class="devicon-css3-plain colored"></i>
-                    <i class="devicon-javascript-plain colored"></i>
-                    <i class="devicon-typescript-plain colored"></i>
-                
-                
-                </div>
-                <div class="skill-box">
-                    <p class="skills-title">Back-end</p>
-                    <i class="devicon-php-plain colored"></i>
-                    <i class="devicon-python-plain colored"></i>
-                    <i class="devicon-java-plain colored"></i>
-                    <i class="devicon-c-plain colored"></i>
-                    <i class="devicon-csharp-plain colored"></i>
-                
-                </div>
-                
-                <div class="skill-box">
-                    <p class="skills-title">Frameworks e Bibliotecas</p>
-                    <i class="devicon-bootstrap-plain colored"></i>
-                    <i class="devicon-jquery-plain colored"></i>
-                    <i class="devicon-react-original colored"></i>
-                
-                </div>
-                
-                <div class="skill-box">
-                    <p class="skills-title">Bancos de dados</p>
-                    <i class="devicon-mysql-plain colored"></i>
-                    <!-- <i class="devicon-mongodb-plain colored"></i> -->
+                <a href="https://github.com/jorgeapontes" id="btn-projects" target="_blank">
+                        <ion-icon name="share-social-outline"></ion-icon>
+                        <span>Ver todos</span>
+                    </a>
+            </section>
+
+            <div id="skills">
+                <h2 id="skills-section-title">Minhas Skills</h2>
+                <p class="description">Veja as tecnologias que já tive experiência: </p>
+                <div id="skills-container">
                     
+                    <div class="skill-box">
+                        <p class="skills-title">Front-end</p>
+                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-css3-plain colored"></i>
+                        <i class="devicon-javascript-plain colored"></i>
+                        </div>
+                    
+                    <div class="skill-box">
+                        <p class="skills-title">Back-end</p>
+                        <i class="devicon-php-plain colored"></i>
+                        <i class="devicon-python-plain colored"></i>
+                        <i class="devicon-java-plain colored"></i>
+                        <i class="devicon-c-plain colored"></i>
+                        <i class="devicon-csharp-plain colored"></i>
+                    </div>
+                    
+                    <div class="skill-box">
+                        <p class="skills-title">Frameworks e Bibliotecas</p>
+                        <i class="devicon-bootstrap-plain colored"></i>
+                        <i class="devicon-jquery-plain colored"></i>
+                        <i class="devicon-react-original colored"></i>
+                    </div>
+                    
+                    <div class="skill-box">
+                        <p class="skills-title">Bancos de dados</p>
+                        <i class="devicon-mysql-plain colored"></i>
+                        </div>
+                    
+                    <div class="skill-box">
+                        <p class="skills-title">Tools</p>
+                        <i class="devicon-git-plain colored"></i>
+                        <i class="devicon-github-plain colored"></i>
+                        <i class="devicon-linux-plain colored"></i>
+                    </div>    
                 </div>
-                
-                <div class="skill-box">
-                    <p class="skills-title">Tools</p>
-                    <i class="devicon-git-plain colored"></i>
-                    <i class="devicon-github-plain colored"></i>
-                    <i class="devicon-linux-plain colored"></i>
-                </div>    
             </div>
-
-
         </section>
-
-
-       
-
     </main>
-    <!--IonIcon-->
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const navbar = document.querySelector('#navbar');
+  const navbarHeight = navbar ? navbar.offsetHeight : 0;
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      const href = anchor.getAttribute('href');
+      const target = document.querySelector(href);
+      if (!target) return; // segurança
+
+      e.preventDefault(); // evita comportamento padrão (que causa o pulo horizontal)
+
+      // Calcula a posição Y do elemento e subtrai a altura da navbar
+      const top = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 8; // -8 para um pequeno espaçamento
+
+      // Scroll suave apenas no eixo vertical
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+});
+</script>
 
 </body>
 </html>
