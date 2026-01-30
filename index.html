@@ -17,15 +17,17 @@
 
 <body>
     <nav id="navbar">
-      <div class="navlogo">
-        <img src="img/20251103_1152_Logo Futurista JP_simple_compose_01k95390bmewasjzc169mhg06s.png" alt="logo">
-      </div>
-      <div class="nav-container">
-          <ul>
-              <li><a href="#sobre-mim">Sobre mim</a></li>
-              <li><a href="#projetos">Projetos</a></li>
-              <li><a href="#skills">Skills</a></li>
-          </ul>
+      <div class="navbar-content">
+        <div class="navlogo">
+          <img src="img/20251103_1152_Logo Futurista JP_simple_compose_01k95390bmewasjzc169mhg06s.png" alt="logo">
+        </div>
+        <div class="nav-container">
+            <ul>
+                <li><a href="#sobre-mim">Sobre mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </div>
       </div>
     </nav>
 
@@ -33,7 +35,7 @@
         <aside id="bio-container">
             
             <img id="bio-image" src="img/jpportfolio.jpg" alt="Jorge Pontes">
-            <p>Olá, meu nome é Jorge e sou <span class="highlight">Desenvolvedor!</span></p>
+            <p>Olá, meu nome é <strong>Jorge</strong> e sou <span class="highlight">Desenvolvedor!</span></p>
             <p id="welcome-text">Seja bem-vindo!</p>    
             
             <div id="email-container">
@@ -42,19 +44,20 @@
             </div>
             
             <h2>Entre em Contato:</h2>
-            <a href="https://wa.me/5511996563500?text=Olá! Vim pelo seu Portfólio, e gostaria de saber mais..." class="contact-btn whatsapp" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                        <div class="btn-text">
-                            <span>WhatsApp</span>
-                        </div>
-                    </a>
-            <a href="mailto:jorgeappontes13@gmail.com" class="contact-btn forms" target="_blank">
-                        <i class="fa-solid fa-envelope"></i>
-                        <div class="btn-text">
-                            <span>E-mail</span>
-                            
-                        </div>
-                    </a>
+            <div class="contact-buttons-wrapper">
+                <a href="https://wa.me/5511996563500?text=Olá! Vim pelo seu Portfólio, e gostaria de saber mais..." class="contact-btn whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <div class="btn-text">
+                        <span>WhatsApp</span>
+                    </div>
+                </a>
+                <a href="mailto:jorgeappontes13@gmail.com" class="contact-btn forms" target="_blank">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div class="btn-text">
+                        <span>E-mail</span>
+                    </div>
+                </a>
+            </div>
             
         </aside>
         <section id="about-container">
@@ -87,6 +90,24 @@
             <section id="projetos">
                 <h2>Meus Projetos</h2>
                 <p id="Pprojetos">Aqui estão alguns dos projetos que já realizei!</p>
+
+                 <details class="project">
+                    <summary class="project-header">
+                        <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
+                        <span>Encontre o Campo (Freelance)</span>
+                    </summary>
+                    <div class="project-content">
+                        <div class="card">
+                            <img src="img/{3986AE4D-5EB7-4C44-A53F-553C24FFE778}.png" alt="Imagem do Projeto 4">
+                            <div class="card-content">
+                                <p>Esse é um projeto freelance, com a finalidade de fazer uma plataforma para vendas de produtos rurais, com o diferencial de transporte.</p>
+                                <div class="card-buttons">
+                                    <a href="https://github.com/jorgeapontes/EncontreOCampo" target="_blank" class="btn">Ver</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
 
                 <details class="project">
                     <summary class="project-header">
@@ -124,25 +145,6 @@
                         </div>
                     </div>
                 </details>
-
-                <details class="project">
-                    <summary class="project-header">
-                        <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
-                        <span>Encontre o Campo</span>
-                    </summary>
-                    <div class="project-content">
-                        <div class="card">
-                            <img src="img/{E04892D7-11DF-47B2-A0CD-3940ACBBCF04}.png" alt="Imagem do Projeto 4">
-                            <div class="card-content">
-                                <p>Esse é um projeto freelance, com a finalidade de fazer uma plataforma para vendas de produtos rurais, com o diferencial de transporte.</p>
-                                <div class="card-buttons">
-                                    <a href="https://github.com/jorgeapontes/EncontreOCampo" target="_blank" class="btn">Ver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
 
                 <details class="project">
                     <summary class="project-header">
@@ -251,7 +253,7 @@
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('#navbar');
   const navbarHeight = navbar ? navbar.offsetHeight : 0;
