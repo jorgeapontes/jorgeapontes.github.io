@@ -1,280 +1,444 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Jorge</title>
+    <title>Jorge Pontes | Desenvolvedor Full-Stack</title>
     <link rel="icon" type="image/x-icon" href="img/20251103_1152_Logo Futurista JP_simple_compose_01k95390bmewasjzc169mhg06s.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <script src="scripts.js"></script>
-
 </head>
 
 <body>
-    <nav id="navbar">
-      <div class="navbar-content">
-        <div class="navlogo">
-          <img src="img/20251103_1152_Logo Futurista JP_simple_compose_01k95390bmewasjzc169mhg06s.png" alt="logo">
-        </div>
-        <div class="nav-container">
-            <ul>
-                <li><a href="#sobre-mim">Sobre mim</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#skills">Skills</a></li>
-            </ul>
-        </div>
-      </div>
-    </nav>
-
-    <main id="container">
-        <aside id="bio-container">
-            
-            <img id="bio-image" src="img/jpportfolio.jpg" alt="Jorge Pontes">
-            <p>Olá, meu nome é <strong>Jorge</strong> e sou <span class="highlight">Desenvolvedor!</span></p>
-            <p id="welcome-text">Seja bem-vindo!</p>    
-            
-            <div id="email-container">
-            <ion-icon name="mail-outline"></ion-icon>
-            <a href="mailto:jorgeappontes13@gmail.com">jorgeappontes13@gmail.com</a>
-            </div>
-            
-            <h2>Entre em Contato:</h2>
-            <div class="contact-buttons-wrapper">
-                <a href="https://wa.me/5511996563500?text=Olá! Vim pelo seu Portfólio, e gostaria de saber mais..." class="contact-btn whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    <div class="btn-text">
-                        <span>WhatsApp</span>
-                    </div>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="img/20251103_1152_Logo Futurista JP_simple_compose_01k95390bmewasjzc169mhg06s.png" alt="JP Logo">
+                    <span>Jorge Pontes</span>
                 </a>
-                <a href="mailto:jorgeappontes13@gmail.com" class="contact-btn forms" target="_blank">
-                    <i class="fa-solid fa-envelope"></i>
-                    <div class="btn-text">
-                        <span>E-mail</span>
-                    </div>
-                </a>
-            </div>
-            
-        </aside>
-        <section id="about-container">
-            <!-- NOVO DESIGN SOBRE MIM -->
-            <div id="sobre-mim" class="about-card">
-                <h1 id="Name">Jorge Pontes</h1>
-                <p id="title"><span class="highlight">Sobre mim:</span></p>
-                <p class="description">
-                    Sou desenvolvedor com foco em <span class="highlight">Front-end</span> e <span class="highlight">Back-end</span>.
-                    Amo a tecnologia e estudo diariamente para escrever código de qualidade e me tornar cada vez melhor.
-                </p>
-                <ul class="about-list">
-                    <li>💻 Experiência com desenvolvimento Web e desktop;</li>
-                    <li>⚙️ Conhecimento em diversas linguagens de programação;</li>
-                    <li>🌍 Inglês avançado.</li>
-                </ul>
-                <a href="https://github.com/jorgeapontes" id="btn-projects" target="_blank">
-                    <ion-icon name="share-social-outline"></ion-icon>
-                    <span>Ver projetos</span>
-                </a>
-
-                <ul id="social-icons-container">
-                    <li><a href="https://www.linkedin.com/in/jorgepontes13" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                    <li><a href="https://github.com/jorgeapontes" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
-                    <li><a href="https://www.instagram.com/jorgeagp_/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                </ul>
-            </div>
-            
-
-            <section id="projetos">
-                <h2>Meus Projetos</h2>
-                <p id="Pprojetos">Aqui estão alguns dos projetos que já realizei!</p>
-
-                 <details class="project">
-                    <summary class="project-header">
-                        <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
-                        <span>Encontre o Campo (Freelance)</span>
-                    </summary>
-                    <div class="project-content">
-                        <div class="card">
-                            <img src="img/{3986AE4D-5EB7-4C44-A53F-553C24FFE778}.png" alt="Imagem do Projeto 4">
-                            <div class="card-content">
-                                <p>Esse é um projeto freelance, com a finalidade de fazer uma plataforma para vendas de produtos rurais, com o diferencial de transporte.</p>
-                                <div class="card-buttons">
-                                    <a href="https://github.com/jorgeapontes/EncontreOCampo" target="_blank" class="btn">Ver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details class="project">
-                    <summary class="project-header">
-                        <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
-                        <span>Risenglish (Freelance)</span>
-                    </summary>
-                    <div class="project-content">
-                        <div class="card">
-                            <img src="img/{A98AA5F9-277E-4510-A20F-E55589CDAB2D}.png" alt="Imagem do Projeto 1">
-                            <div class="card-content">
-                                <p>O projeto, chamado Risenglish, é um sistema de gerenciamento de aulas de inglês.
-                                    Nele, os professores podem fazer upload dos materiais utilizados nas aulas, controlar presenças e gerenciar outros detalhes de forma prática e profissional. Já os alunos têm acesso facilitado a todos os arquivos e informações em um único lugar.</p>
-                                <div class="card-buttons">
-                                    <a href="https://github.com/jorgeapontes/Risenglish" target="_blank" class="btn">Ver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details class="project">
-                    <summary class="project-header">
-                        <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
-                        <span>JapiWiki (Projeto Pessoal)</span>
-                    </summary>
-                    <div class="project-content">
-                        <div class="card">
-                            <img src="img/{D2246561-9111-4E28-9697-359A8376CEBF}.png" alt="Imagem do Projeto 1">
-                            <div class="card-content">
-                                <p>JapiWiki: Ciência Cidadã na Serra do Japi. Registre avistamentos de fauna, flora e eventos ambientais. Contribua para a ciência e conservação!</p>
-                                <div class="card-buttons">
-                                    <a href="https://github.com/jorgeapontes/ciencia_cidada" target="_blank" class="btn">Ver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details class="project">
-                    <summary class="project-header">
-                        <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
-                        <span>Calculadora de IMC com REACT</span>
-                    </summary>
-                    <div class="project-content">
-                        <div class="card">
-                            <img src="img/{1B23909E-78F0-4F84-9F14-C1F9021C6F02}.png" alt="Imagem do Projeto 6">
-                            <div class="card-content">
-                                <p>Projeto feito com o intuito de treinar JavaScript e React.</p>
-                                <div class="card-buttons">
-                                    <a href="https://github.com/jorgeapontes/IMC_REACT" target="_blank" class="btn">Ver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details class="project">
-                    <summary class="project-header">
-                        <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
-                        <span>Gerador de QR Codes</span>
-                    </summary>
-                    <div class="project-content">
-                        <div class="card">
-                            <img src="img/{01CC4AF5-9FE6-4F90-B3DA-76EC7270765D}.png" alt="Imagem do Projeto 2">
-                            <div class="card-content">
-                                <p>Projeto simples e muito útil, para gerar QR Codes.</p>
-                                <div class="card-buttons">
-                                    <a href="https://github.com/jorgeapontes/QR_Code_Generator" target="_blank" class="btn">Ver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details class="project">
-                    <summary class="project-header">
-                        <ion-icon name="chevron-forward-outline" class="arrow"></ion-icon>
-                        <span>Calculadora Estatística</span>
-                    </summary>
-                    <div class="project-content">
-                        <div class="card">
-                            <img src="img/{33000D50-E9C7-4F24-830B-80D15F9543F6}.png" alt="Imagem do Projeto 3">
-                            <div class="card-content">
-                                <p>Realize automaticamente diversos cálculos utilizando várias fórmulas, retornando diferentes tipos de resultados!</p>
-                                <div class="card-buttons">
-                                    <a href="https://github.com/jorgeapontes/Calculadora_estatistica" target="_blank" class="btn">Ver</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
                 
-                <a href="https://github.com/jorgeapontes" id="btn-projects" target="_blank">
-                        <ion-icon name="share-social-outline"></ion-icon>
-                        <span>Ver todos</span>
-                    </a>
-            </section>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">Início</a>
+                    <a href="#about" class="nav-link">Sobre</a>
+                    <a href="#projects" class="nav-link">Projetos</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#contact" class="nav-link">Contato</a>
+                </div>
 
-            <div id="skills">
-                <h2 id="skills-section-title">Minhas Skills</h2>
-                <p class="description">Veja as tecnologias que já tive experiência: </p>
-                <div id="skills-container">
+                <div class="nav-actions">
+                    <a href="https://github.com/jorgeapontes" target="_blank" class="github-btn">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h4 class="hero-subtitle">Olá, me chamo:</h4>
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Jorge Pontes</span>
+                    </h1>
+                    <h2 class="hero-role">Desenvolvedor Full-Stack</h2>
+                    <p class="hero-description">
+                        Transformo ideias em realidade digital. Especializado em desenvolvimento web, 
+                        com foco em criar experiências únicas e soluções inovadoras.
+                    </p>
                     
-                    <div class="skill-box">
-                        <p class="skills-title">Front-end</p>
-                        <i class="devicon-html5-plain colored"></i>
-                        <i class="devicon-css3-plain colored"></i>
-                        <i class="devicon-javascript-plain colored"></i>
-                        </div>
-                    
-                    <div class="skill-box">
-                        <p class="skills-title">Back-end</p>
-                        <i class="devicon-php-plain colored"></i>
-                        <i class="devicon-python-plain colored"></i>
-                        <i class="devicon-java-plain colored"></i>
-                        <i class="devicon-c-plain colored"></i>
-                        <i class="devicon-csharp-plain colored"></i>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Ver Projetos
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Entrar em Contato
+                        </a>
                     </div>
-                    
-                    <div class="skill-box">
-                        <p class="skills-title">Frameworks e Bibliotecas</p>
-                        <i class="devicon-bootstrap-plain colored"></i>
-                        <i class="devicon-jquery-plain colored"></i>
-                        <i class="devicon-react-original colored"></i>
+                </div>
+
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="img/jpportfolio.jpg" alt="Jorge Pontes" class="profile-image">
+                        <div class="image-glow"></div>
                     </div>
-                    
-                    <div class="skill-box">
-                        <p class="skills-title">Bancos de dados</p>
-                        <i class="devicon-mysql-plain colored"></i>
-                        </div>
-                    
-                    <div class="skill-box">
-                        <p class="skills-title">Tools</p>
-                        <i class="devicon-git-plain colored"></i>
-                        <i class="devicon-github-plain colored"></i>
-                        <i class="devicon-linux-plain colored"></i>
-                    </div>    
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
+    <!-- About Section - Atualizada -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-number">01.</span>
+                    Sobre Mim
+                </h2>
+                <p class="section-subtitle">Um pouco da minha jornada</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Sou um desenvolvedor apaixonado por tecnologia, com foco em criar soluções 
+                        inovadoras que fazem a diferença. Minha jornada começou há alguns anos e 
+                        desde então venho me dedicando ao estudo contínuo e à prática do desenvolvimento web.
+                    </p>
+                    <p>
+                        Tenho experiência tanto no <span class="highlight">Front-end</span> quanto no 
+                        <span class="highlight">Back-end</span>, sempre buscando escrever código limpo, 
+                        eficiente e escalável. Acredito que a tecnologia tem o poder de transformar 
+                        vidas e é isso que me motiva a continuar aprendendo e evoluindo.
+                    </p>
+
+                </div>
+
+                <div class="about-social">
+                    <h3>Conecte-se comigo</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/jorgepontes13" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/jorgeapontes" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://wa.me/5511996563500" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                        <a href="mailto:jorgeappontes13@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                            Email
+                        </a>
+                    </div>
+                </div>
+
+                <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <h4>Desenvolvimento Full-Stack</h4>
+                                <p>Experiência em todas as áreas</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-bolt"></i>
+                            <div>
+                                <h4>Performance & SEO</h4>
+                                <p>Otimização para melhor experiência do usuário</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <h4>Inglês Avançado</h4>
+                                <p>Comunicação fluente em projetos internacionais</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section - Atualizada -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-number">02.</span>
+                    Projetos Destacados
+                </h2>
+                <p class="section-subtitle">Alguns dos meus trabalhos recentes</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Projeto 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-badge">Freelance</div>
+                        <div class="project-links">
+                            <a href="https://github.com/jorgeapontes/EncontreOCampo" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Encontre o Campo</h3>
+                        <p class="project-description">
+                            Plataforma para venda de produtos rurais com sistema de transporte integrado.
+                            Desenvolvido como projeto freelance.
+                        </p>
+                    </div>
+                    <div class="project-image">
+                        <img src="img/{3986AE4D-5EB7-4C44-A53F-553C24FFE778}.png" alt="Encontre o Campo">
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-badge">Freelance</div>
+                        <div class="project-links">
+                            <a href="https://github.com/jorgeapontes/Risenglish" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Risenglish</h3>
+                        <p class="project-description">
+                            Sistema completo de gerenciamento de aulas de inglês para professores e alunos.
+                        </p>
+                    </div>
+                    <div class="project-image">
+                        <img src="img/{A98AA5F9-277E-4510-A20F-E55589CDAB2D}.png" alt="Risenglish">
+                    </div>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-badge">Pessoal</div>
+                        <div class="project-links">
+                            <a href="https://github.com/jorgeapontes/ciencia_cidada" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">JapiWiki</h3>
+                        <p class="project-description">
+                            Plataforma de ciência cidadã para registro de avistamentos na Serra do Japi.
+                        </p>
+                    </div>
+                    <div class="project-image">
+                        <img src="img/{D2246561-9111-4E28-9697-359A8376CEBF}.png" alt="JapiWiki">
+                    </div>
+                </div>
+
+                <!-- Projeto 4 -->
+                 <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-badge">Pessoal</div>
+                        <div class="project-links">
+                            <a href="https://github.com/jorgeapontes/QR_Code_Generator" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Gerador de QR-Code</h3>
+                        <p class="project-description">
+                            Gerador simples de QR-Codes para URLs.
+                        </p>
+                    </div>
+                    <div class="project-image">
+                        <img src="img/{01CC4AF5-9FE6-4F90-B3DA-76EC7270765D}.png" alt="Gerador de QR-Code">
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-footer">
+                <a href="https://github.com/jorgeapontes" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-github"></i>
+                    Ver Todos os Projetos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section - Atualizada -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-number">03.</span>
+                    Skills & Tecnologias
+                </h2>
+                <p class="section-subtitle">Tecnologias que domino e utilizo</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-desktop"></i>
+                        Front-end
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="devicon-html5-plain colored"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-css3-plain colored"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-react-original colored"></i>
+                            <span>React</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-server"></i>
+                        Back-end
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="devicon-python-plain colored"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-php-plain colored"></i>
+                            <span>PHP</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-csharp-plain colored"></i>
+                            <span>C#</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-java-plain colored"></i>
+                            <span>Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-database"></i>
+                        Outros
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="devicon-mysql-plain colored"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-git-plain colored"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-github-plain colored"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-linux-plain colored"></i>
+                            <span>Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - Atualizada -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-number">04.</span>
+                    Vamos Conversar?
+                </h2>
+                <p class="section-subtitle">Entre em contato para projetos ou oportunidades</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <a href="mailto:jorgeappontes13@gmail.com" class="contact-btn">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <span>jorgeappontes13@gmail.com</span>
+                    </a>
+
+                    <a href="https://wa.me/5511996563500" target="_blank" class="contact-btn">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <span>+55 (11) 99656-3500</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/jorgepontes13" target="_blank" class="contact-btn">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <span>/jorgepontes13</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/20251103_1152_Logo Futurista JP_simple_compose_01k95390bmewasjzc169mhg06s.png" alt="Logo">
+                    <span>Jorge Pontes</span>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#home">Início</a>
+                    <a href="#about">Sobre</a>
+                    <a href="#projects">Projetos</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contato</a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://github.com/jorgeapontes" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jorgepontes13" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/jorgeagp_/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:jorgeappontes13@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jorge Pontes. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-document.addEventListener('DOMContentLoaded', () => {
-  const navbar = document.querySelector('#navbar');
-  const navbarHeight = navbar ? navbar.offsetHeight : 0;
-
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', e => {
-      const href = anchor.getAttribute('href');
-      const target = document.querySelector(href);
-      if (!target) return; // segurança
-
-      e.preventDefault(); // evita comportamento padrão (que causa o pulo horizontal)
-
-      // Calcula a posição Y do elemento e subtrai a altura da navbar
-      const top = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 8; // -8 para um pequeno espaçamento
-
-      // Scroll suave apenas no eixo vertical
-      window.scrollTo({ top, behavior: 'smooth' });
-    });
-  });
-});
-</script>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
