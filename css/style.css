@@ -417,16 +417,16 @@ section {
 
 .feature {
     background: rgba(26, 35, 50, 0.6);
-    padding: 30px 28px;
+    padding: 24px 26px;
     border-radius: var(--border-radius-lg);
     border-left: 5px solid var(--primary);
     transition: var(--transition);
     text-align: left;
     display: flex;
     gap: 18px;
-    align-items: flex-start;
-    min-height: 240px;
     width: 100%;
+    min-height: auto;
+    align-items: center;
 }
 
 .feature:hover {
