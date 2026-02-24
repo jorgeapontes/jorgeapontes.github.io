@@ -867,22 +867,40 @@ section {
 
 @media (max-width: 1024px) {
     .hero-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
         text-align: center;
     }
+
+    .hero-text {
+        display: contents;
+    }
+
+    .hero-subtitle  { order: 0; }
+    .hero-title     { order: 1; }
+    .hero-role      { order: 2; margin-bottom: 30px; }
+    .hero-image     { order: 3; margin-bottom: 30px; }
+    .hero-description { order: 4; }
+    .hero-actions   { order: 5; }
     
     .hero-title {
         font-size: 3rem;
+        margin-bottom: 20px;
     }
     
     .hero-description {
         margin: 0 auto 40px;
     }
     
+    .hero-actions {
+        justify-content: center;
+    }
+
     .image-wrapper {
         width: 350px;
         height: 350px;
+        margin: 0 auto;
     }
     
     .about-content {
