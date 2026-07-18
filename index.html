@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jorge Pontes | Desenvolvedor Full-Stack</title>
+    <title>Jorge Pontes | Suporte de TI & Desenvolvedor Full-Stack</title>
     <link rel="icon" type="image/x-icon" href="img/20251103_1152_Logo Futurista JP_simple_compose_01k95390bmewasjzc169mhg06s.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,18 +14,17 @@
 </head>
 
 <body>
-    <!-- Header/Navbar -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">
+                <a href="#home" class="logo">
                     <img src="img/20251103_1152_Logo Futurista JP_simple_compose_01k95390bmewasjzc169mhg06s.png" alt="JP Logo">
                 </a>
-                
-                <div class="nav-links">
+
+                <div class="nav-links" id="navLinks">
                     <a href="#home" class="nav-link active">Início</a>
-                    <a href="#about" class="nav-link">Sobre</a>
                     <a href="#projects" class="nav-link">Projetos</a>
+                    <a href="#about" class="nav-link">Sobre</a>
                     <a href="#skills" class="nav-link">Skills</a>
                     <a href="#contact" class="nav-link">Contato</a>
                 </div>
@@ -35,7 +34,7 @@
                         <i class="fab fa-github"></i>
                         GitHub
                     </a>
-                    <button class="menu-toggle" id="menuToggle">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -45,7 +44,8 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
@@ -54,12 +54,12 @@
                     <h1 class="hero-title">
                         <span class="gradient-text">Jorge Pontes</span>
                     </h1>
-                    <h2 class="hero-role">Desenvolvedor Full-Stack</h2>
+                    <h2 class="hero-role">Suporte de TI & Dev Full-Stack</h2>
                     <p class="hero-description">
-                        Transformando ideias em realidade digital. Voltado para desenvolvimento web, 
-                        com foco em criar experiências únicas e soluções inovadoras.
+                        Atuando em infraestrutura de TI e desenvolvimento de software. 
+                        Focado em criar soluções digitais!
                     </p>
-                    
+
                     <div class="hero-actions">
                         <a href="#projects" class="btn btn-primary">
                             <i class="fas fa-rocket"></i>
@@ -77,135 +77,40 @@
                         <img src="img/jpportfolio.jpg" alt="Jorge Pontes" class="profile-image">
                         <div class="image-glow"></div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section - Atualizada -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="section-number">01.</span>
-                    Sobre Mim
-                </h2>
-                <p class="section-subtitle">Um pouco da minha jornada</p>
-            </div>
-
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Sou um desenvolvedor apaixonado por tecnologia, com foco em criar soluções 
-                        inovadoras que fazem a diferença. Minha jornada começou há alguns anos e 
-                        desde então venho me dedicando ao estudo contínuo e à prática do desenvolvimento.
-                    </p>
-                    <p>
-                        Tenho experiência tanto no <span class="highlight">Front-end</span> quanto no 
-                        <span class="highlight">Back-end</span>, sempre buscando escrever código limpo, 
-                        eficiente e escalável. Acredito que a tecnologia tem o poder de transformar 
-                        vidas e é isso que me motiva a continuar aprendendo e evoluindo.
-                    </p>
-
-                </div>
-
-                <div class="about-social">
-                    <h3>Conecte-se comigo</h3>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/jorgepontes13" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                            LinkedIn
-                        </a>
-                        <a href="https://github.com/jorgeapontes" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                            GitHub
-                        </a>
-                        <a href="https://wa.me/5511996563500" target="_blank" class="social-link">
-                            <i class="fab fa-whatsapp"></i>
-                            WhatsApp
-                        </a>
-                        <a href="/cdn-cgi/l/email-protection#8ee4e1fce9ebeffefee1e0faebfdbfbdcee9e3efe7e2a0ede1e3" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                            Email
-                        </a>
+                    <div class="hero-badge badge-location">
+                        <i class="fas fa-location-dot"></i>
+                        Jundiaí, SP
                     </div>
-                </div>
-
-                <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-code"></i>
-                            <div>
-                                <h4>Full-Stack</h4>
-                                <p>Experiência em todas as áreas</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-bolt"></i>
-                            <div>
-                                <h4>Performance</h4>
-                                <p>Pensando na melhor experiência do usuário</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-globe"></i>
-                            <div>
-                                <h4>Inglês Avançado</h4>
-                                <p>Comunicação em projetos internacionais</p>
-                            </div>
-                        </div>
                     </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section - Atualizada -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">
-                    <span class="section-number">02.</span>
+                    <span class="section-number">01.</span>
                     Projetos Destacados
                 </h2>
-                <p class="section-subtitle">Alguns dos meus trabalhos recentes</p>
+                <p class="section-subtitle">Alguns dos meus trabalhos recentes como desenvolvedor</p>
             </div>
 
             <div class="projects-grid">
-                <!-- Projeto 1 -->
                 <div class="project-card">
                     <div class="project-header">
                         <div class="project-badge">Freelance</div>
                         <div class="project-links">
-                            <a href="https://encontreocampo.com.br/" target="_blank">
-                                <i class="fa-solid fa-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Encontre o Campo</h3>
-                        <p class="project-description">
-                            Plataforma para venda de produtos rurais com sistema de transporte integrado.
-                            Desenvolvido como projeto freelance.
-                        </p>
-                    </div>
-                    <div class="project-image">
-                        <img src="img/{3986AE4D-5EB7-4C44-A53F-553C24FFE778}.png" alt="Encontre o Campo">
-                    </div>
-                </div>
-
-                <!-- Projeto 2 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-badge">Freelance</div>
-                        <div class="project-links">
-                            <a href="https://risenglish.com.br/" target="_blank">
-                                <i class="fa-solid fa-link"></i>
+                            <a href="https://github.com/jorgeapontes/EncontreOCampo" target="_blank">
+                                <i class="fab fa-github"></i>
                             </a>
                         </div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Risenglish</h3>
                         <p class="project-description">
-                            Sistema completo de gerenciamento de aulas de inglês para professores e alunos.
+                            Sistema de gerenciamento para escolas de idiomas, com controle de turmas, 
+                            agendamento e acompanhamento pedagógico.
                         </p>
                     </div>
                     <div class="project-image">
@@ -213,12 +118,32 @@
                     </div>
                 </div>
 
-                <!-- Projeto 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-badge">Freelance</div>
+                        <div class="project-links">
+                            <a href="https://github.com/jorgeapontes/Risenglish" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Encontre o Campo</h3>
+                        <p class="project-description">
+                            Plataforma para venda de produtos rurais com sistema de transporte integrado. 
+                            Foco em usabilidade e automação para o público agronegócio.
+                        </p>
+                    </div>
+                    <div class="project-image">
+                        <img src="img/{3986AE4D-5EB7-4C44-A53F-553C24FFE778}.png" alt="Encontre o Campo">
+                    </div>
+                </div>
+
                 <div class="project-card">
                     <div class="project-header">
                         <div class="project-badge">Pessoal</div>
                         <div class="project-links">
-                            <a href="https://github.com/jorgeapontes/ciencia_cidada" target="_blank">
+                            <a href="https://github.com/jorgeapontes/ciencia_cidada" target="_blank" title="Ver no GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -226,7 +151,7 @@
                     <div class="project-content">
                         <h3 class="project-title">JapiWiki</h3>
                         <p class="project-description">
-                            Plataforma de ciência cidadã para registro de avistamentos na Serra do Japi.
+                            Plataforma de ciência cidadã para registro e catalogação de fauna e flora na Serra do Japi.
                         </p>
                     </div>
                     <div class="project-image">
@@ -234,12 +159,11 @@
                     </div>
                 </div>
 
-                <!-- Projeto 4 -->
-                 <div class="project-card">
+                <div class="project-card">
                     <div class="project-header">
                         <div class="project-badge">Pessoal</div>
                         <div class="project-links">
-                            <a href="https://github.com/jorgeapontes/QR_Code_Generator" target="_blank">
+                            <a href="https://github.com/jorgeapontes/QR_Code_Generator" target="_blank" title="Ver no GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -247,7 +171,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Gerador de QR-Code</h3>
                         <p class="project-description">
-                            Gerador simples de QR-Codes para URLs.
+                            Ferramenta para geração de QR-Codes a partir de URLs com interface minimalista.
                         </p>
                     </div>
                     <div class="project-image">
@@ -265,7 +189,74 @@
         </div>
     </section>
 
-    <!-- Skills Section - Atualizada -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-number">02.</span>
+                    Sobre Mim
+                </h2>
+                <p class="section-subtitle">Minha trajetória profissional</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Atualmente atuo como <span class="highlight">Analista de Suporte de TI</span>, onde combino minha expertise técnica em infraestrutura com uma sólida trajetória no desenvolvimento Full-Stack. Sou estudante de Análise e Desenvolvimento de Sistemas pela FATEC Jundiaí e possuo inglês avançado.
+                    </p>
+                    <p>
+                        No suporte, gerencio sistemas, redes e segurança, garantindo que a tecnologia seja um facilitador para o negócio. Paralelamente, mantenho minha atuação como <span class="highlight">desenvolvedor freelancer</span>, transformando ideias em sistemas web escaláveis utilizando PHP, MySQL e JavaScript.
+                    </p>
+                    <p>
+                        Focado em performance e código limpo, busco sempre o equilíbrio entre a estabilidade da infraestrutura e a agilidade do desenvolvimento moderno.
+                    </p>
+                </div>
+
+                <div class="about-social">
+                    <h3>Conecte-se comigo</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/jorgepontes13" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/jorgeapontes" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://wa.me/5511996563500" target="_blank" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-server"></i>
+                        <div>
+                            <h4>Suporte de TI</h4>
+                            <p>Gestão de infraestrutura, redes e sistemas críticos</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-code"></i>
+                        <div>
+                            <h4>Full-Stack</h4>
+                            <p>Desenvolvimento web moderno e sistemas personalizados</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h4>Comunicação</h4>
+                            <p>Inglês avançado para ambientes internacionais</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
@@ -273,27 +264,27 @@
                     <span class="section-number">03.</span>
                     Skills & Tecnologias
                 </h2>
-                <p class="section-subtitle">Tecnologias que domino e utilizo</p>
+                <p class="section-subtitle">Ferramentas que utilizo no dia a dia</p>
             </div>
 
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3 class="skill-category-title">
                         <i class="fas fa-desktop"></i>
-                        Front-end
+                        Desenvolvimento
                     </h3>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <i class="devicon-html5-plain colored"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-css3-plain colored"></i>
-                            <span>CSS3</span>
+                            <i class="devicon-php-plain colored"></i>
+                            <span>PHP</span>
                         </div>
                         <div class="skill-item">
                             <i class="devicon-javascript-plain colored"></i>
                             <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-mysql-plain colored"></i>
+                            <span>MySQL</span>
                         </div>
                         <div class="skill-item">
                             <i class="devicon-react-original colored"></i>
@@ -304,8 +295,33 @@
 
                 <div class="skill-category">
                     <h3 class="skill-category-title">
-                        <i class="fas fa-server"></i>
-                        Back-end
+                        <i class="fas fa-network-wired"></i>
+                        TI & Infra
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="devicon-linux-plain colored"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fa-solid fa-shield"></i>
+                            <span>Segurança</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Redes</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-github-plain colored"></i>
+                            <span>Git/GitHub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-terminal"></i>
+                        Outras Linguagens
                     </h3>
                     <div class="skill-items">
                         <div class="skill-item">
@@ -313,41 +329,16 @@
                             <span>Python</span>
                         </div>
                         <div class="skill-item">
-                            <i class="devicon-php-plain colored"></i>
-                            <span>PHP</span>
+                            <i class="devicon-java-plain colored"></i>
+                            <span>Java</span>
                         </div>
                         <div class="skill-item">
                             <i class="devicon-csharp-plain colored"></i>
                             <span>C#</span>
                         </div>
                         <div class="skill-item">
-                            <i class="devicon-java-plain colored"></i>
-                            <span>Java</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="skill-category-title">
-                        <i class="fas fa-database"></i>
-                        Outros
-                    </h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="devicon-mysql-plain colored"></i>
-                            <span>MySQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-git-plain colored"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-github-plain colored"></i>
-                            <span>GitHub</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-linux-plain colored"></i>
-                            <span>Linux</span>
+                            <i class="devicon-html5-plain colored"></i>
+                            <span>HTML/CSS</span>
                         </div>
                     </div>
                 </div>
@@ -355,7 +346,6 @@
         </div>
     </section>
 
-    <!-- Contact Section - Atualizada -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
@@ -368,12 +358,12 @@
 
             <div class="contact-content">
                 <div class="contact-info">
-                    <a href="/cdn-cgi/l/email-protection#e48e8b9683818594948b8a908197d5d7a48389858d88ca878b89" class="contact-btn">
+                    <a href="mailto:jorgeappontes13@gmail.com" class="contact-btn">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h3>Email</h3>
-                        <span><span class="__cf_email__" data-cfemail="2d47425f4a484c5d5d424359485e1c1e6d4a404c4441034e4240">[email&#160;protected]</span></span>
+                        <span>jorgeappontes13@gmail.com</span>
                     </a>
 
                     <a href="https://wa.me/5511996563500" target="_blank" class="contact-btn">
@@ -396,7 +386,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -407,30 +396,25 @@
 
                 <div class="footer-links">
                     <a href="#home">Início</a>
-                    <a href="#about">Sobre</a>
                     <a href="#projects">Projetos</a>
+                    <a href="#about">Sobre</a>
                     <a href="#skills">Skills</a>
                     <a href="#contact">Contato</a>
                 </div>
 
                 <div class="footer-social">
-                    <a href="https://github.com/jorgeapontes" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/jorgepontes13" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://www.instagram.com/jorgeagp_/" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="mailto:jorgeappontes13@gmail.com">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+                    <a href="https://github.com/jorgeapontes" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jorgepontes13" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/jorgeagp_/" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 Jorge Pontes. Todos os direitos reservados.</p>
+                <p>&copy; 2026 Jorge Pontes. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
