@@ -38,6 +38,8 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -263,6 +265,7 @@ body::before {
     color: var(--gray);
     margin-bottom: 40px;
     max-width: 500px;
+    overflow-wrap: break-word;
 }
 
 .hero-actions {
@@ -365,54 +368,6 @@ body::before {
     50% { opacity: 0.5; }
 }
 
-/* Hero floating badges */
-.hero-badge {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 18px;
-    background: rgba(10, 25, 41, 0.9);
-    border: 1px solid rgba(46, 139, 87, 0.4);
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--light);
-    backdrop-filter: blur(10px);
-    box-shadow: var(--shadow-md);
-    white-space: nowrap;
-    z-index: 3;
-}
-
-.hero-badge i {
-    color: var(--secondary);
-    font-size: 0.9rem;
-}
-
-.badge-location {
-    bottom: 20px;
-    left: 20px;
-}
-
-.badge-status {
-    top: 30px;
-    right: -10px;
-}
-
-.status-dot {
-    width: 8px;
-    height: 8px;
-    background: var(--secondary);
-    border-radius: 50%;
-    animation: blink 2s infinite;
-    flex-shrink: 0;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-}
-
 /* =====================
    Section Common Styles
    ===================== */
@@ -469,6 +424,7 @@ section {
     font-size: 1.1rem;
     color: var(--gray);
     line-height: 1.8;
+    overflow-wrap: break-word;
 }
 
 .highlight {
@@ -1077,8 +1033,21 @@ section {
         transform: rotate(-45deg) translate(6px, -6px);
     }
 
+    section {
+        padding: 70px 0;
+    }
+
+    .projects,
+    .about {
+        padding: 64px 0;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
     .hero {
-        padding: 140px 0 80px;
+        padding: 130px 0 70px;
     }
 
     .hero-title {
@@ -1089,17 +1058,26 @@ section {
         font-size: 1.5rem;
     }
 
+    .hero-description {
+        font-size: 1.05rem;
+    }
+
     .hero-actions {
         flex-direction: column;
         gap: 15px;
+        width: 100%;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .badge-location {
-        left: 0;
+    .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
     }
 
-    .badge-status {
-        right: 0;
+    .about-text p {
+        font-size: 1rem;
     }
 
     .projects-grid {
@@ -1146,21 +1124,44 @@ section {
         padding: 0 15px;
     }
 
+    .hero {
+        padding: 115px 0 55px;
+    }
+
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
     }
 
     .hero-role {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
+
+    .btn {
+        padding: 14px 24px;
+        font-size: 0.95rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.9rem;
+    }
+
+    .section-header {
+        margin-bottom: 32px;
+    }
+
+    .projects,
+    .about {
+        padding: 52px 0;
     }
 
     .image-wrapper {
-        width: 280px;
-        height: 280px;
+        width: 260px;
+        height: 260px;
     }
 
     .feature {
@@ -1187,6 +1188,11 @@ section {
 
     .skill-item i {
         font-size: 40px;
+    }
+
+    .github-btn {
+        padding: 10px 14px;
+        gap: 0;
     }
 
     .github-btn span {
