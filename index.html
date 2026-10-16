@@ -3,24 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jorge Pontes | Desenvolvedor Web Freelancer & Infraestrutura de TI</title>
-    <meta name="description" content="Jorge Pontes — desenvolvedor web freelancer. Sistemas sob medida de ponta a ponta (front-end, back-end e banco de dados) e infraestrutura de redes e servidores.">
-    <meta name="theme-color" content="#0a1929">
+    <title>Jorge | Desenvolvedor Web</title>
+    <meta name="description" content="Jorge, desenvolvedor web freelancer. Sistemas sob medida de ponta a ponta (front-end, back-end e banco de dados) e infraestrutura de redes e servidores.">
+    <meta name="theme-color" content="#071220">
     <link rel="icon" type="image/x-icon" href="img/20251103_1152_Logo Futurista JP_simple_compose_01k95390bmewasjzc169mhg06s.png">
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body>
+    <!-- Intro (abertura da apresentação) -->
+    <div class="intro" id="intro" aria-hidden="true">
+        <div class="intro-inner">
+            <span class="intro-name">Jorge</span>
+            <span class="intro-bar"><span></span></span>
+        </div>
+    </div>
+
+    <!-- Progresso da apresentação -->
+    <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
     <header class="header" id="header">
         <div class="container">
             <nav class="navbar">
                 <a href="#home" class="logo">
-                    <img src="img/20251103_1152_Logo Futurista JP_simple_compose_01k95390bmewasjzc169mhg06s.png" alt="JP Logo">
+                    <img src="img/20251103_1152_Logo Futurista JP_simple_compose_01k95390bmewasjzc169mhg06s.png" alt="Logo JP">
                 </a>
 
                 <div class="nav-links" id="navLinks">
@@ -48,348 +60,540 @@
 
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h4 class="hero-subtitle">Olá, me chamo:</h4>
-                    <h1 class="hero-title">
-                        <span class="gradient-text">Jorge Pontes</span>
-                    </h1>
-                    <h2 class="hero-role">Desenvolvedor Web Freelancer</h2>
-                    <p class="hero-description">
-                        Crio sistemas web sob medida de ponta a ponta. Também atuo com
-                        infraestrutura de redes e servidores (Proxmox, pfSense).
-                    </p>
+    <!-- Navegação lateral por slides -->
+    <nav class="slide-dots" id="slideDots" aria-label="Slides"></nav>
 
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">
-                            <i class="fas fa-rocket"></i>
-                            Ver Projetos
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <i class="fas fa-envelope"></i>
-                            Contratar / Contato
-                        </a>
+    <!-- Contador de slides -->
+    <div class="slide-counter" aria-hidden="true">
+        <span class="slide-counter-current" id="slideCurrent">01</span>
+        <span class="slide-counter-line"></span>
+        <span class="slide-counter-total" id="slideTotal">01</span>
+        <span class="slide-counter-label" id="slideLabel">Início</span>
+    </div>
+
+    <main>
+        <!-- ===================== SLIDE: CAPA ===================== -->
+        <section id="home" class="slide hero" data-title="Início">
+            <div class="hero-bg-text" data-parallax="0.25" aria-hidden="true">JORGE</div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span class="hero-hello" data-reveal="up" style="--d: .1s">Olá, eu sou o</span>
+                            <span class="gradient-text hero-name" data-split>Jorge</span>
+                        </h1>
+                        <p class="hero-description typewriter" id="typewriter">Crio sistemas web sob medida de ponta a ponta. Também atuo com infraestrutura de redes e servidores (Proxmox, pfSense).</p>
+
+                        <div class="hero-actions" data-reveal="up" style="--d: .8s">
+                            <a href="#projects" class="btn btn-primary">
+                                <i class="fas fa-rocket"></i>
+                                Ver Projetos
+                            </a>
+                            <a href="#contact" class="btn btn-secondary">
+                                <i class="fas fa-envelope"></i>
+                                Contato
+                            </a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="hero-image">
-                    <div class="image-wrapper">
-                        <img src="img/jpportfolio.jpg" alt="Jorge Pontes" class="profile-image">
-                        <div class="image-glow"></div>
+                    <div class="hero-image" data-reveal="scale" style="--d: .3s">
+                        <div class="image-wrapper">
+                            <div class="image-ring"></div>
+                            <img src="img/jpportfolio.jpg" alt="Jorge" class="profile-image">
+                            <div class="image-glow"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="section-number">01.</span>
-                    Projetos Destacados
-                </h2>
-                <p class="section-subtitle">Sistemas web que entreguei de ponta a ponta como freelancer</p>
+            <a href="#projects" class="scroll-cue" aria-label="Próximo slide">
+                <span>Role para começar</span>
+                <i class="fas fa-arrow-down"></i>
+            </a>
+        </section>
+
+        <!-- ===================== SLIDE: ABERTURA PROJETOS ===================== -->
+        <section id="projects" class="slide statement" data-title="Projetos">
+            <div class="container">
+                <p class="eyebrow" data-reveal="up"><span class="section-number">01.</span> Projetos</p>
+                <h2 class="statement-title" data-split>Problemas reais, resolvidos com sistemas sob medida.</h2>
+                <p class="statement-sub" data-reveal="up" style="--d: .4s">
+                    Cada projeto começa entendendo o negócio do cliente. A seguir, os casos que entreguei
+                    de ponta a ponta, do problema inicial à solução no ar.
+                </p>
+
+                <div class="process" data-stagger>
+                    <div class="process-step">
+                        <span class="process-num">01</span>
+                        <i class="fas fa-magnifying-glass"></i>
+                        <h3>Entender</h3>
+                        <p>Mapeio a rotina do cliente e onde o processo atual trava.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-num">02</span>
+                        <i class="fas fa-code"></i>
+                        <h3>Construir</h3>
+                        <p>Front-end, back-end e banco de dados pensados para aquele negócio.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-num">03</span>
+                        <i class="fas fa-rocket"></i>
+                        <h3>Entregar</h3>
+                        <p>Publicação, hospedagem e suporte para o sistema seguir evoluindo.</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-badge">Freelance</div>
-                        <div class="project-links">
-                            <a href="https://risenglish.com.br/" target="_blank">
-                                <i class="fa-solid fa-link"></i>
-                            </a>
+        <!-- ===================== SLIDE: CASE 01 ===================== -->
+        <section id="case-risenglish" class="slide case" data-title="Risenglish">
+            <div class="container">
+                <div class="case-head">
+                    <span class="case-index" data-reveal="left">01</span>
+                    <div>
+                        <div class="case-tags" data-reveal="up">
+                            <span class="project-badge">Freelance</span>
+                            <span class="case-type">Site institucional + Sistema de gestão</span>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Risenglish</h3>
-                        <p class="project-description">
-                            Sistema de gerenciamento para escolas de idiomas, com controle de turmas, 
-                            agendamento e acompanhamento pedagógico.
+                        <h2 class="case-title" data-split>Risenglish</h2>
+                        <p class="case-lead" data-reveal="up" style="--d: .3s">
+                            Escola de inglês online focada em conversação, com acompanhamento individual de cada aluno.
                         </p>
-                    </div>
-                    <div class="project-image">
-                        <img src="img/risenglish.png" alt="Risenglish">
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-badge">Freelance</div>
-                        <div class="project-links">
-                            <a href="https://encontreocampo.com.br/" target="_blank">
-                                <i class="fa-solid fa-link"></i>
-                            </a>
+                <div class="case-body">
+                    <div class="case-visual" data-reveal="clip">
+                        <div class="browser" data-parallax="-0.06">
+                            <div class="browser-bar">
+                                <span></span><span></span><span></span>
+                                <div class="browser-url"><i class="fas fa-lock"></i> risenglish.com.br</div>
+                            </div>
+                            <img src="img/risenglish.png" alt="Página inicial do site Risenglish" loading="lazy">
                         </div>
+                        <dl class="case-meta" data-stagger>
+                            <div><dt>Cliente</dt><dd>Risenglish</dd></div>
+                        </dl>
+                        <a href="https://risenglish.com.br/" target="_blank" class="btn btn-outline case-link" data-reveal="up">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver projeto no ar
+                        </a>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Encontre o Campo</h3>
-                        <p class="project-description">
-                            Plataforma para venda de produtos rurais com sistema de transporte integrado. 
-                            Foco em usabilidade e automação para o público agronegócio.
+
+                    <div class="case-story">
+                        <article class="story-block problem" data-reveal="right">
+                            <h3><i class="fas fa-triangle-exclamation"></i> O desafio</h3>
+                            <p>
+                                A organização da escola (turmas, agenda de aulas e a evolução pedagógica de cada
+                                aluno) dependia de controles manuais e espalhados. Além disso, a Risenglish não
+                                tinha um site que apresentasse seu método e transformasse visitantes em alunos.
+                            </p>
+                        </article>
+
+                        <article class="story-block solution" data-reveal="right" style="--d: .1s">
+                            <h3><i class="fas fa-lightbulb"></i> A solução</h3>
+                            <p>
+                                Desenvolvi de ponta a ponta um site institucional e um sistema de gestão integrado.
+                                O site comunica a metodologia em três etapas (<strong>Aquisição, Prática e Ajuste</strong>)
+                                e leva o visitante à matrícula, enquanto a área logada centraliza a operação da escola.
+                            </p>
+                        </article>
+
+                        <article class="story-block delivered" data-reveal="right" style="--d: .2s">
+                            <h3><i class="fas fa-circle-check"></i> O que foi entregue</h3>
+                            <ul class="check-list" data-stagger>
+                                <li>Site institucional responsivo, alinhado à identidade da marca</li>
+                                <li>Área logada com acesso por perfil</li>
+                                <li>Controle de turmas e alunos</li>
+                                <li>Agendamento de aulas</li>
+                                <li>Acompanhamento pedagógico individual</li>
+                                <li>Canais de conversão: formulário de inscrição e WhatsApp</li>
+                            </ul>
+                        </article>
+
+                        <p class="case-result" data-reveal="up">
+                            <i class="fas fa-chart-line"></i>
+                            Resultado: operação centralizada em um único sistema e uma vitrine digital profissional para captar novos alunos.
                         </p>
                     </div>
-                    <div class="project-image">
-                        <img src="img/{3986AE4D-5EB7-4C44-A53F-553C24FFE778}.png" alt="Encontre o Campo">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SLIDE: CASE 02 ===================== -->
+        <section id="case-encontre" class="slide case case-alt" data-title="Encontre o Campo">
+            <div class="container">
+                <div class="case-head">
+                    <span class="case-index" data-reveal="left">02</span>
+                    <div>
+                        <div class="case-tags" data-reveal="up">
+                            <span class="project-badge">Freelance</span>
+                            <span class="case-type">Marketplace + Logística</span>
+                        </div>
+                        <h2 class="case-title" data-split>Encontre o Campo</h2>
+                        <p class="case-lead" data-reveal="up" style="--d: .3s">
+                            Marketplace do agronegócio que conecta produtores, compradores e transportadores em todo o Brasil.
+                        </p>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-badge">Pessoal</div>
-                        <div class="project-links">
-                            <a href="https://github.com/jorgeapontes/ciencia_cidada" target="_blank" title="Ver no GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
+                <div class="case-body">
+                    <div class="case-visual" data-reveal="clip">
+                        <div class="browser" data-parallax="-0.06">
+                            <div class="browser-bar">
+                                <span></span><span></span><span></span>
+                                <div class="browser-url"><i class="fas fa-lock"></i> encontreocampo.com.br</div>
+                            </div>
+                            <img src="img/{3986AE4D-5EB7-4C44-A53F-553C24FFE778}.png" alt="Página inicial do Encontre o Campo" loading="lazy">
                         </div>
+                        <dl class="case-meta" data-stagger>
+                            <div><dt>Cliente</dt><dd>Encontre o Campo</dd></div>
+                        </dl>
+                        <a href="https://encontreocampo.com.br/" target="_blank" class="btn btn-outline case-link" data-reveal="up">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver projeto no ar
+                        </a>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">JapiWiki</h3>
-                        <p class="project-description">
+
+                    <div class="case-story">
+                        <article class="story-block problem" data-reveal="right">
+                            <h3><i class="fas fa-triangle-exclamation"></i> O desafio</h3>
+                            <p>
+                                Produtores rurais têm dificuldade de alcançar compradores fora do mercado local e
+                                dependem de intermediários. Comerciantes e atacadistas, por sua vez, precisam de
+                                segurança para negociar com quem não conhecem. Além disso, o frete entre o campo e o
+                                comprador é um gargalo constante.
+                            </p>
+                        </article>
+
+                        <article class="story-block solution" data-reveal="right" style="--d: .1s">
+                            <h3><i class="fas fa-lightbulb"></i> A solução</h3>
+                            <p>
+                                Construí uma plataforma que reúne <strong>três perfis</strong> (produtor, comprador e
+                                transportador) em um só ecossistema, com camadas de verificação para gerar confiança
+                                e um módulo de frete integrado à venda.
+                            </p>
+                        </article>
+
+                        <article class="story-block delivered" data-reveal="right" style="--d: .2s">
+                            <h3><i class="fas fa-circle-check"></i> O que foi entregue</h3>
+                            <ul class="check-list" data-stagger>
+                                <li>Marketplace de anúncios com fluxos de compra e venda</li>
+                                <li>Cadastro em etapas para pessoa física e jurídica (CNPJ), com endereço preenchido pelo CEP</li>
+                                <li>Verificação de identidade com selfie e documento (frente e verso)</li>
+                                <li>Aprovação de contas pela equipe antes do acesso</li>
+                                <li>Planos gerenciados pelo próprio painel do usuário</li>
+                                <li>Módulo de transporte: cadastro com ANTT e veículo, e escolha de fretes por rota</li>
+                            </ul>
+                        </article>
+
+                        <p class="case-result" data-reveal="up">
+                            <i class="fas fa-chart-line"></i>
+                            Resultado: um canal de vendas nacional para o produtor, compra segura para o comprador e renda por entrega para o transportador.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SLIDE: CASE 03 ===================== -->
+        <section id="case-japiwiki" class="slide case" data-title="JapiWiki">
+            <div class="container">
+                <div class="case-head">
+                    <span class="case-index" data-reveal="left">03</span>
+                    <div>
+                        <div class="case-tags" data-reveal="up">
+                            <span class="project-badge badge-muted">Projeto pessoal</span>
+                            <span class="case-type">Plataforma colaborativa</span>
+                        </div>
+                        <h2 class="case-title" data-split>JapiWiki</h2>
+                        <p class="case-lead" data-reveal="up" style="--d: .3s">
                             Plataforma de ciência cidadã para registro e catalogação de fauna e flora na Serra do Japi.
                         </p>
                     </div>
-                    <div class="project-image">
-                        <img src="img/{D2246561-9111-4E28-9697-359A8376CEBF}.png" alt="JapiWiki">
-                    </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-badge">Pessoal</div>
-                        <div class="project-links">
-                            <a href="https://github.com/jorgeapontes/QR_Code_Generator" target="_blank" title="Ver no GitHub">
+                <div class="case-body">
+                    <div class="case-visual" data-reveal="clip">
+                        <div class="browser" data-parallax="-0.06">
+                            <div class="browser-bar">
+                                <span></span><span></span><span></span>
+                                <div class="browser-url"><i class="fab fa-github"></i> jorgeapontes/ciencia_cidada</div>
+                            </div>
+                            <img src="img/{D2246561-9111-4E28-9697-359A8376CEBF}.png" alt="Tela da plataforma JapiWiki" loading="lazy">
+                        </div>
+                        <dl class="case-meta" data-stagger>
+                            <div><dt>Tipo</dt><dd>Projeto pessoal</dd></div>
+                        </dl>
+                        <a href="https://github.com/jorgeapontes/ciencia_cidada" target="_blank" class="btn btn-outline case-link" data-reveal="up">
+                            <i class="fab fa-github"></i> Ver código no GitHub
+                        </a>
+                    </div>
+
+                    <div class="case-story">
+                        <article class="story-block problem" data-reveal="right">
+                            <h3><i class="fas fa-triangle-exclamation"></i> O desafio</h3>
+                            <p>
+                                Observações de fauna, flora e eventos ambientais na Serra do Japi, área de
+                                preservação em Jundiaí/SP, ficam dispersas em redes sociais e cadernos de campo,
+                                sem validação técnica e sem um acervo que possa ser consultado.
+                            </p>
+                        </article>
+
+                        <article class="story-block solution" data-reveal="right" style="--d: .1s">
+                            <h3><i class="fas fa-lightbulb"></i> A solução</h3>
+                            <p>
+                                Uma plataforma colaborativa em que qualquer pessoa registra suas observações e
+                                <strong>especialistas</strong> ajudam a qualificar os dados, formando uma base
+                                de conhecimento aberta sobre a região.
+                            </p>
+                        </article>
+
+                        <article class="story-block delivered" data-reveal="right" style="--d: .2s">
+                            <h3><i class="fas fa-circle-check"></i> O que foi construído</h3>
+                            <ul class="check-list" data-stagger>
+                                <li>Cadastro, login e recuperação de senha</li>
+                                <li>Feed de registros com fotos e comentários</li>
+                                <li>Painéis distintos para usuário, especialista e administrador</li>
+                                <li>Gestão de usuários e moderação de conteúdo</li>
+                                <li>Base de dados de espécies</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SLIDE: OUTROS PROJETOS ===================== -->
+        <section id="more" class="slide more" data-title="Mais projetos">
+            <div class="container">
+                <p class="eyebrow" data-reveal="up">Laboratório</p>
+                <h2 class="more-title" data-split>Projetos de estudo</h2>
+
+                <div class="more-grid">
+                    <a href="https://github.com/jorgeapontes/QR_Code_Generator" target="_blank" class="more-card" data-reveal="up">
+                        <div class="more-image">
+                            <img src="img/{01CC4AF5-9FE6-4F90-B3DA-76EC7270765D}.png" alt="Gerador de QR-Code" loading="lazy">
+                        </div>
+                        <div class="more-info">
+                            <div>
+                                <h3>Gerador de QR-Code</h3>
+                                <p>Geração de QR-Codes a partir de URLs com interface minimalista.</p>
+                            </div>
+                            <i class="fab fa-github"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/jorgeapontes" target="_blank" class="more-card more-cta" data-reveal="up" style="--d: .15s">
+                        <i class="fab fa-github more-cta-icon"></i>
+                        <h3>Ver todos os projetos</h3>
+                        <p>Código, estudos e experimentos no meu GitHub.</p>
+                        <span class="more-cta-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SLIDE: SOBRE ===================== -->
+        <section id="about" class="slide about" data-title="Sobre">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-reveal="up">
+                        <span class="section-number">02.</span>
+                        Sobre Mim
+                    </h2>
+                    <p class="section-subtitle" data-reveal="up" style="--d: .1s">Desenvolvimento web sob medida e infraestrutura de TI</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text" data-stagger>
+                        <p>
+                            Atuo como <span class="highlight">desenvolvedor freelancer</span>, entregando projetos completos. Já coloquei no ar sistemas cuidando de toda a <span class="highlight">stack</span>.
+                        </p>
+                        <p>
+                            Em paralelo, trabalho com infraestrutura de redes e servidores, no dia a dia com virtualização (Proxmox) e firewalls (pfSense). Acredito que a tecnologia só é eficiente quando facilita a vida das pessoas, por isso foco em automação de processos e na melhoria contínua do ambiente.
+                        </p>
+                        <p>
+                            Sou formado em <span class="highlight">Análise e Desenvolvimento de Sistemas pela FATEC</span>, o que reforça minha base em programação (C#, PHP, Python) e banco de dados. Tenho inglês avançado e experiência com Git/GitHub, monitoramento (Grafana) e gestão de projetos (Trello e Notion).
+                        </p>
+                    </div>
+
+                    <div class="about-social" data-reveal="right">
+                        <h3>Conecte-se comigo</h3>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/jorgepontes13" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                LinkedIn
+                            </a>
+                            <a href="https://github.com/jorgeapontes" target="_blank" class="social-link">
                                 <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                            <a href="https://wa.me/5511996563500" target="_blank" class="social-link">
+                                <i class="fab fa-whatsapp"></i>
+                                WhatsApp
                             </a>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Gerador de QR-Code</h3>
-                        <p class="project-description">
-                            Ferramenta para geração de QR-Codes a partir de URLs com interface minimalista.
-                        </p>
-                    </div>
-                    <div class="project-image">
-                        <img src="img/{01CC4AF5-9FE6-4F90-B3DA-76EC7270765D}.png" alt="Gerador de QR-Code">
+
+                    <div class="about-features" data-stagger>
+                        <div class="feature">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <h4>Desenvolvimento Web</h4>
+                                <p>Sistemas sob medida de ponta a ponta: front-end, back-end e banco de dados</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-server"></i>
+                            <div>
+                                <h4>Infraestrutura &amp; Redes</h4>
+                                <p>Virtualização (Proxmox), firewalls (pfSense) e automação de ambientes</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <h4>Comunicação</h4>
+                                <p>Inglês avançado para ambientes internacionais</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="projects-footer">
-                <a href="https://github.com/jorgeapontes" target="_blank" class="btn btn-outline">
-                    <i class="fab fa-github"></i>
-                    Ver Todos os Projetos
-                </a>
+        <!-- ===================== SLIDE: SKILLS ===================== -->
+        <section id="skills" class="slide skills" data-title="Skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-reveal="up">
+                        <span class="section-number">03.</span>
+                        Skills & Tecnologias
+                    </h2>
+                    <p class="section-subtitle" data-reveal="up" style="--d: .1s">Ferramentas que utilizo no dia a dia</p>
+                </div>
+
+                <div class="skills-grid" data-stagger>
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">
+                            <i class="fas fa-desktop"></i>
+                            Desenvolvimento
+                        </h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="devicon-laravel-original colored"></i>
+                                <span>Laravel</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-azuresqldatabase-plain"></i>
+                                <span>SQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-php-plain colored"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-javascript-plain colored"></i>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">
+                            <i class="fas fa-network-wired"></i>
+                            TI & Infra
+                        </h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="devicon-linux-plain colored"></i>
+                                <span>Linux</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fa-solid fa-shield"></i>
+                                <span>Segurança</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-pfsense-original"></i>
+                                <span>pfSense</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-grafana-plain colored"></i>
+                                <span>Grafana</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">
+                            <i class="fas fa-terminal"></i>
+                            Outros
+                        </h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="devicon-python-plain colored"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-csharp-plain colored"></i>
+                                <span>C#</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-github-plain"></i>
+                                <span>Git/GitHub</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-notion-plain"></i>
+                                <span>Notion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="section-number">02.</span>
-                    Sobre Mim
-                </h2>
-                <p class="section-subtitle">Desenvolvimento web sob medida e infraestrutura de TI</p>
-            </div>
-
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Atuo como <span class="highlight">desenvolvedor freelancer</span>, entregando projetos completos. Já coloquei no ar sistemas cuidando de toda a <span class="highlight">stack</span>.
+        <!-- ===================== SLIDE: CONTATO ===================== -->
+        <section id="contact" class="slide contact" data-title="Contato">
+            <div class="container">
+                <div class="contact-content">
+                    <p class="eyebrow" data-reveal="up"><span class="section-number">04.</span> Contato</p>
+                    <h2 class="contact-title" data-split>Tem um problema para resolver?</h2>
+                    <p class="contact-sub" data-reveal="up" style="--d: .35s">
+                        Me conte sobre o seu negócio. Vamos conversar sobre como um sistema sob medida pode ajudar.
                     </p>
-                    <p>
-                        Em paralelo, trabalho com infraestrutura de redes e servidores, no dia a dia com virtualização (Proxmox) e firewalls (pfSense). Acredito que a tecnologia só é eficiente quando facilita a vida das pessoas, por isso foco em automação de processos e na melhoria contínua do ambiente.
-                    </p>
-                    <p>
-                        Estou no último semestre de Análise e Desenvolvimento de Sistemas pela FATEC, o que reforça minha base em programação (C#, PHP, Python) e banco de dados. Tenho inglês avançado e experiência com Git/GitHub, monitoramento (Grafana) e gestão de projetos (Trello).
-                    </p>
-                </div>
 
-                <div class="about-social">
-                    <h3>Conecte-se comigo</h3>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/jorgepontes13" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                            LinkedIn
+                    <div class="contact-info" data-stagger>
+                        <a href="mailto:jorgeappontes13@gmail.com" class="contact-btn">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email</h3>
                         </a>
-                        <a href="https://github.com/jorgeapontes" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                            GitHub
+
+                        <a href="https://wa.me/5511996563500" target="_blank" class="contact-btn">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <h3>WhatsApp</h3>
                         </a>
-                        <a href="https://wa.me/5511996563500" target="_blank" class="social-link">
-                            <i class="fab fa-whatsapp"></i>
-                            WhatsApp
+
+                        <a href="https://www.linkedin.com/in/jorgepontes13" target="_blank" class="contact-btn">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <h3>LinkedIn</h3>
                         </a>
                     </div>
                 </div>
-
-                <div class="about-features">
-                    <div class="feature">
-                        <i class="fas fa-code"></i>
-                        <div>
-                            <h4>Desenvolvimento Web</h4>
-                            <p>Sistemas sob medida de ponta a ponta: front-end, back-end e banco de dados</p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-server"></i>
-                        <div>
-                            <h4>Infraestrutura &amp; Redes</h4>
-                            <p>Virtualização (Proxmox), firewalls (pfSense) e automação de ambientes</p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-globe"></i>
-                        <div>
-                            <h4>Comunicação</h4>
-                            <p>Inglês avançado para ambientes internacionais</p>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="section-number">03.</span>
-                    Skills & Tecnologias
-                </h2>
-                <p class="section-subtitle">Ferramentas que utilizo no dia a dia</p>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="skill-category-title">
-                        <i class="fas fa-desktop"></i>
-                        Desenvolvimento
-                    </h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="devicon-laravel-original colored"></i>
-                            <span>Laravel</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-azuresqldatabase-plain"></i>
-                            <span>SQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-php-plain colored"></i>
-                            <span>PHP</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-javascript-plain colored"></i>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="skill-category-title">
-                        <i class="fas fa-network-wired"></i>
-                        TI & Infra
-                    </h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="devicon-linux-plain colored"></i>
-                            <span>Linux</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa-solid fa-shield"></i>
-                            <span>Segurança</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-pfsense-original"></i>
-                            <span>pfSense</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-grafana-plain colored"></i>
-                            <span>Grafana</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="skill-category-title">
-                        <i class="fas fa-terminal"></i>
-                        Outros
-                    </h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="devicon-python-plain colored"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-csharp-plain colored"></i>
-                            <span>C#</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-github-plain"></i>
-                            <span>Git/GitHub</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-notion-plain"></i>
-                            <span>Notion</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="section-number">04.</span>
-                    Vamos Conversar?
-                </h2>
-                <p class="section-subtitle">Entre em contato para projetos ou oportunidades</p>
-            </div>
-
-            <div class="contact-content">
-                <div class="contact-info">
-                    <a href="mailto:jorgeappontes13@gmail.com" class="contact-btn">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3>Email</h3>
-                        <!-- <span>jorgeappontes13@gmail.com</span> -->
-                    </a>
-
-                    <a href="https://wa.me/5511996563500" target="_blank" class="contact-btn">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <h3>WhatsApp</h3>
-                        <!-- <span>+55 (11) 99656-3500</span> -->
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/jorgepontes13" target="_blank" class="contact-btn">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <h3>LinkedIn</h3>
-                        <!-- <span>/jorgepontes13</span> -->
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
                     <img src="img/20251103_1152_Logo Futurista JP_simple_compose_01k95390bmewasjzc169mhg06s.png" alt="Logo">
-                    <span>Jorge Pontes</span>
+                    <span>Jorge</span>
                 </div>
 
                 <div class="footer-links">
@@ -401,14 +605,14 @@
                 </div>
 
                 <div class="footer-social">
-                    <a href="https://github.com/jorgeapontes" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/jorgepontes13" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/jorgeagp_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/jorgeapontes" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jorgepontes13" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/jorgeagp_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Jorge Pontes. Todos os direitos reservados.</p>
+                <p>&copy; 2026 Jorge. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
