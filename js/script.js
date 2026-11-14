@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const startReveal = () => {
         if (!('IntersectionObserver' in window)) {
             revealTargets.forEach(el => el.classList.add('is-visible'));
+            document.querySelectorAll('.timeline').forEach(el => el.classList.add('is-drawn'));
             return;
         }
 
@@ -154,6 +155,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
 
         revealTargets.forEach(el => observer.observe(el));
+
+        // Linha da timeline de experiência: classe permanente (não passa pelo cleanup)
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('is-drawn');
+                timelineObserver.unobserve(entry.target);
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.timeline').forEach(el => timelineObserver.observe(el));
     };
 
     // ========================
